@@ -1,0 +1,21 @@
+.container-imagen{
+    height: 400px;
+    margin:0;
+}
+.container{
+    height: 500;
+}
+.avatar{
+    height: 100%;
+}
+.container__info p {
+    margin: 0;
+  }
+  .twitter {
+    color: rgb(29 161 242);
+  }
+  .container__info {
+    margin-left: 20px;
+    text-align: center;
+    height: 50px;
+  }

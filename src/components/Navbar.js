@@ -12,15 +12,10 @@ export default function Navbar() {
             </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Lista de animes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dirrectorio de animes</a>
-                        </li>
+                    
+                        <Link className="nav-link active" to="/"><li>Inicio</li></Link>
+                        <Link className="nav-link" to="/characters"><li>Lista de animes</li></Link>
+                        <Link className="nav-link" to="/episode"><li>Dirrectorio de animes</li></Link>
                     </ul>
                 </div>
         </div>

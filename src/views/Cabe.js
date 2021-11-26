@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from 'react'
-import CardEpisode from '../components/CardEpisode'
+import Cabezera from '../components/Cabezera'
 
-
-
-export default function Episode() {
-    
+export default function Cabe() {
+   
     const [datos, setDatos] = useState({
         data: []
     })
     const [hasError, setError] = useState(false)
-    const fetchCharacter = async () => {
-        const response = await fetch('https://api.aniapi.com/v1/random/anime/1000')
+    const fetchCabe = async () => {
+        const response = await fetch('https://api.aniapi.com/v1/random/anime/1')
         response
             .json()
             .then(response => setDatos(response))
             .catch(error => setError(error))
     }
     useEffect(() => {
-        fetchCharacter()
-    }, [])
+        fetchCabe()
+    })
+    
+   
     // debugger
     console.log(datos.data)
     return (
         <div>
-            <CardEpisode items={datos.data} />
+            <Cabezera items={datos.data} />
         </div>
     )
+    setInterval(Cabe(),3000)
 }
